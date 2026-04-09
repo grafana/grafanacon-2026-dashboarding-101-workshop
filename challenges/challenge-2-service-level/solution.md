@@ -12,8 +12,8 @@
 ### Step 2 — Browse suggested dashboards
 
 1. Click **Build dashboards** > **From suggestions**
-2. In the suggestions modal, search for **"Open Telemetry"**
-3. Select **"OpenTelemetry for HTTP services"**
+2. In the suggestions modal, search for **`OpenTelemetry for HTTP Services`** — the search is case sensitive, use this exact casing
+3. Select **OpenTelemetry for HTTP Services**
 4. Click **View dashboard**
 
 ### Step 3 — Map data sources
@@ -38,8 +38,10 @@ If the dashboard is showing data, click **Save dashboard** — you'll modify thi
 ### Step 1 — Identify latency signals
 
 Locate panels that show:
-- **P95 latency**
-- **P99 latency**
+- **P95 latency** — the worst wait time experienced by 95 out of 100 shoppers. Ignore the 5 slowest experiences, and this is the maximum.
+- **P99 latency** — the worst wait time experienced by 99 out of 100 shoppers. Ignore only the single slowest experience, and this is the maximum.
+
+Averages hide the slow ones. Percentiles don't.
 
 These are your key indicators of performance issues.
 
