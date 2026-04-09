@@ -68,7 +68,19 @@ The Kubernetes dashboard is a great starting point, but it is designed for a bro
 
 ---
 
-## Step 5 — Hide some variables to make the dashboard less overwhelming
+## Step 5 — Filter the data to your services
+
+Before hiding variables, use them to narrow the dashboard down to the services your team owns.
+
+1. In the variable bar at the top, find the **pod** dropdown
+2. Select only the **payment** and **cart** pods
+3. Confirm that the panels update to show data for those pods only
+
+**Checkpoint:** Are the panels now showing data for the payment and cart pods only?
+
+---
+
+## Step 6 — Hide some variables to make the dashboard less overwhelming
 
 The default dashboard exposes many variables that may not be relevant to your use case. Hiding unnecessary ones reduces noise and makes the dashboard easier to use. Keep only **pod** and **resolution** visible.
 
@@ -82,7 +94,7 @@ The default dashboard exposes many variables that may not be relevant to your us
 
 ---
 
-## Step 6 — Save the dashboard
+## Step 7 — Save the dashboard
 
 1. Click the **Save** icon (top right)
 2. Give it a meaningful name, for example: `Payment Squad / K8s Health`
@@ -91,7 +103,7 @@ The default dashboard exposes many variables that may not be relevant to your us
 
 ---
 
-## Step 7 — Change the layout from rows to tabs
+## Step 8 — Change the layout from rows to tabs
 
 Tabs make it easier to navigate between groups of panels without scrolling through an entire page.
 
@@ -102,7 +114,7 @@ Tabs make it easier to navigate between groups of panels without scrolling throu
 
 ---
 
-## Step 8 — Reorganise the tabs
+## Step 9 — Reorganise the tabs
 
 Arrange the tabs so your viewers can find what they need at a glance.
 
