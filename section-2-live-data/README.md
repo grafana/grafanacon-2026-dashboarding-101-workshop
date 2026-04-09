@@ -62,52 +62,95 @@ You should now see a dashboard with live pod data.
 
 ---
 
-## Step 4 — Explore what is there
+## Step 4 — Tailor the default dashboard to your needs
 
-Do not edit anything yet. Just look.
-
-1. Find a panel showing **request rate** — which RED signal is this?
-2. Find a panel showing **errors** or failed pods
-3. Change the time range (top-right) from `Last 1h` to `Last 3h`
-4. Watch the panels update — does the trend tell a different story?
-
-**Checkpoint:** Did your panels update when you changed the time range?
+The Kubernetes dashboard is a great starting point, but it is designed for a broad audience. Your goal is to reshape it so it serves your team's specific needs.
 
 ---
 
-## Step 5 — Edit a panel
+## Step 5 — Hide some variables to make the dashboard less overwhelming
 
-1. Click the `⋮` menu on any panel and select **Edit**
-2. Change the panel title to something descriptive, for example: `Pod Restart Count`
-3. Look at the query — this is PromQL. You do not need to write it today, just observe.
-4. Click **Apply** to save the panel change
-
----
-
-## Step 6 — Add a variable
-
-Variables make a dashboard reusable. Instead of one static view, the dashboard adapts to whoever is looking at it.
+The default dashboard exposes many variables that may not be relevant to your use case. Hiding unnecessary ones reduces noise and makes the dashboard easier to use.
 
 1. Open **Dashboard settings** (gear icon, top right)
-2. Go to **Variables** and click **Add variable**
-3. Configure it:
-   - **Type:** Query
-   - **Name:** `namespace`
-   - **Data source:** `grafanacloud-prom`
-   - **Query:** `label_values(kube_pod_info, namespace)`
-4. Click **Run query** to preview the values, then **Apply**
-5. Go back to the dashboard — you should see a namespace dropdown at the top
+2. Go to **Variables**
+3. Click on a variable you want to hide
+4. Set the **Hide** option to **Variable** or **Label**
+5. Click **Apply**, then go back to the dashboard
+6. Repeat for each variable you want to hide
 
-**Checkpoint:** Can you see the namespace dropdown? Try changing it and watch the panels update.
+**Checkpoint:** Is the variable bar at the top of your dashboard shorter and easier to read?
 
 ---
 
-## Step 7 — Save your dashboard
+## Step 6 — Save the dashboard
 
 1. Click the **Save** icon (top right)
-2. Give it a meaningful name: `ops / system-health`
-3. Add a description: who is this dashboard for and what question does it answer?
+2. Give it a meaningful name, for example: `Payment Squad / K8s Health`
+3. Add a description — who is this dashboard for, and what question does it answer?
 4. Click **Save**
+
+---
+
+## Step 7 — Change the layout from rows to tabs
+
+Tabs make it easier to navigate between groups of panels without scrolling through an entire page.
+
+1. Open the dashboard in edit mode
+2. Click on a row header to open the row options
+3. Select **Convert row to tab**
+4. Repeat for each row
+5. Save the dashboard
+
+---
+
+## Step 8 — Reorganise the tabs
+
+Arrange the tabs so your viewers can find what they need at a glance.
+
+1. In edit mode, drag and drop the tabs to reorder them
+2. Rename each tab to reflect its content clearly, for example: `Overview`, `CPU`, `Memory`, `Network`
+3. Save the dashboard
+
+**Checkpoint:** Does the tab order reflect the most common questions your team asks?
+
+---
+
+## Bonus
+
+### Override the series colour scheme
+
+Apply a consistent colour scheme to **CPU Usage Request** and **CPU Usage Limit** to distinguish them clearly.
+
+1. Open the panel in edit mode
+2. Go to the **Overrides** tab in the right panel
+3. Click **Add field override** > **Fields with name**
+4. Select the series you want to override (e.g. `CPU Usage Request`)
+5. Click **Add override property** > **Standard options > Color scheme**
+6. Choose a colour and apply
+7. Repeat for `CPU Usage Limit`
+
+> **Tip:** You can use **Panel styles presets** for quick, consistent styling across panels.
+
+---
+
+### Change thresholds for a time series
+
+Apply custom thresholds to **Memory Usage / Requests & Limits by container** to highlight critical states visually.
+
+1. Open the panel in edit mode
+2. In the right panel, go to **Standard options** > **Thresholds**
+3. Set the following thresholds:
+
+| Value | Colour |
+|---|---|
+| Base | No colour |
+| 20 % | Purple |
+| 30 % | Green |
+| 60 % | Orange |
+| 80 % | Red |
+
+4. Click **Apply** to save your changes
 
 ---
 
@@ -115,10 +158,10 @@ Variables make a dashboard reusable. Instead of one static view, the dashboard a
 
 - **No need to reinvent the wheel** — use suggested dashboards
 - **Tailor the default dashboard** to your needs:
-  - Hide some variables to make it less overwhelming
-  - Changed the layout from rows to tabs
+  - Hide variables to make the dashboard less overwhelming
+  - Change the layout from rows to tabs
   - Reorganise the tabs to make it easier for viewers to find what they need
-- **Bonus:** override series colour scheme, change thresholds for a time series
+- **Bonus:** override the series colour scheme, change thresholds for a time series
 
 ---
 
