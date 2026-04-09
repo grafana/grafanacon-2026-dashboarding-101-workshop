@@ -70,14 +70,13 @@ The Kubernetes dashboard is a great starting point, but it is designed for a bro
 
 ## Step 5 — Hide some variables to make the dashboard less overwhelming
 
-The default dashboard exposes many variables that may not be relevant to your use case. Hiding unnecessary ones reduces noise and makes the dashboard easier to use.
+The default dashboard exposes many variables that may not be relevant to your use case. Hiding unnecessary ones reduces noise and makes the dashboard easier to use. Keep only **pod** and **resolution** visible.
 
-1. Open **Dashboard settings** (gear icon, top right)
-2. Go to **Variables**
-3. Click on a variable you want to hide
-4. Set the **Hide** option to **Variable** or **Label**
-5. Click **Apply**, then go back to the dashboard
-6. Repeat for each variable you want to hide
+1. Click the **Edit** button (top right) to enter edit mode
+2. Hover over a variable in the variable bar — an edit pencil icon appears
+3. Click the pencil icon — a sidebar opens on the right
+4. Under **Display**, set the value to **Hidden**
+5. Repeat for each variable you want to hide, keeping only **pod** and **resolution** visible
 
 **Checkpoint:** Is the variable bar at the top of your dashboard shorter and easier to read?
 
@@ -96,11 +95,10 @@ The default dashboard exposes many variables that may not be relevant to your us
 
 Tabs make it easier to navigate between groups of panels without scrolling through an entire page.
 
-1. Open the dashboard in edit mode
-2. Click on a row header to open the row options
-3. Select **Convert row to tab**
-4. Repeat for each row
-5. Save the dashboard
+1. Click the **Edit** button (top right) to enter edit mode
+2. Click the **cog icon** on the right side of the toolbar (just below the **+** button)
+3. Under **Layout**, select **Tabs**
+4. Save the dashboard
 
 ---
 
@@ -144,7 +142,7 @@ Apply custom thresholds to **Memory Usage / Requests & Limits by container** to 
 
 | Value | Colour |
 |---|---|
-| Base | No colour |
+| Base | Blue |
 | 20 % | Purple |
 | 30 % | Green |
 | 60 % | Orange |
@@ -177,5 +175,5 @@ Apply custom thresholds to **Memory Usage / Requests & Limits by container** to 
 
 ---
 
-> **No peeking!** A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
-> When you're done: [View solution dashboard](./k8s-health-solution.json)
+> **No peeking!** A solution dashboard is available for reference, but try to complete the exercise on your own first.
+> When you're done: [View solution dashboard](https://ecbf94.grafana.net/goto/dfik6l00xsyrkf?orgId=stacks-1586144)
