@@ -1,20 +1,15 @@
-# Section 2: From Data to Insight — Live Data
+# Section 2: From Data to Insight — Data That Changes Over Time
 
 **Facilitator:** Alexa Vargas · **Duration:** 30 min
 
 ---
 
-## The RED framework
+## A snapshot vs a story
 
-Before we build, a mental model for what to look for in a service:
-
-| Signal | Question |
+| Static data — a snapshot | Time series — a story |
 |---|---|
-| **R**ate | How many requests per second is this service handling? |
-| **E**rrors | How many of those requests are failing? |
-| **D**uration | How long are requests taking? Are they getting slower? |
-
-If Rate is normal, Errors are low, and Duration is stable — your service is healthy.
+| "Barcelona WiFi: 142 points" | "CPU has been climbing for 3 hours" |
+| A fact at a point in time. | A trend. A spike at 2am. A slow degradation before an outage. This is where the real insight lives. |
 
 ---
 
@@ -28,9 +23,17 @@ If Rate is normal, Errors are low, and Duration is stable — your service is he
 
 ---
 
+## Grot Plushies: E-commerce monitoring
+
+You're the tech lead for the **Payment Squad**, responsible for the **payment service** and the **cart service** at Grot Plushies — a microservices e-commerce platform.
+
+Your job: build a single dashboard that gives you — and your team — everything needed to monitor your K8s infrastructure.
+
+---
+
 ## Step 1 — Log in
 
-Open your Grafana instance URL from the pre-event email and log in with the provided credentials.
+Open your Grafana instance URL (`https://ecbf94.grafana.net/`) and log in with the provided credentials.
 
 ---
 
@@ -39,6 +42,7 @@ Open your Grafana instance URL from the pre-event email and log in with the prov
 1. Go to **Connections** in the left sidebar
 2. Click **Data Sources**
 3. Find and open the **`grafanacloud-prom`** data source
+4. Click **Build dashboards** > **From suggestions**
 
 A modal opens with dashboard suggestions based on the Prometheus data source type.
 
@@ -50,7 +54,7 @@ A modal opens with dashboard suggestions based on the Prometheus data source typ
 
 1. In the suggestions modal, search for `Kubernetes/Views`
 2. Select **Kubernetes / Views / Pods**
-3. Click **Use Dashboard**
+3. Click **View Dashboard**
 
 You should now see a dashboard with live pod data.
 
@@ -107,6 +111,17 @@ Variables make a dashboard reusable. Instead of one static view, the dashboard a
 
 ---
 
+## What you learnt in this section
+
+- **No need to reinvent the wheel** — use suggested dashboards
+- **Tailor the default dashboard** to your needs:
+  - Hide some variables to make it less overwhelming
+  - Changed the layout from rows to tabs
+  - Reorganise the tabs to make it easier for viewers to find what they need
+- **Bonus:** override series colour scheme, change thresholds for a time series
+
+---
+
 ## Best practices
 
 | Do | Do not |
@@ -116,3 +131,8 @@ Variables make a dashboard reusable. Instead of one static view, the dashboard a
 | One panel, one question | Cram multiple unrelated metrics into one panel |
 | Use units: `%`, `req/s`, `ms` | Leave values without context |
 | Add a description — Grafana's AI assistant reads it | |
+
+---
+
+> **No peeking!** A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
+> When you're done: [View solution dashboard](./k8s-health-solution.json)

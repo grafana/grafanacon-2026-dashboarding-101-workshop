@@ -9,11 +9,12 @@ Facilitators: Yaëlle Chaudy · Alexa Vargas Ortega
 
 By the end of this workshop you will be able to:
 
-- Understand the parts of a dashboard: panels, visualizations, queries, variables, time picker
-- Use Suggested Dashboards to overcome blank-page anxiety
-- Pick the right visualization for your data
+- Understand the components of a dashboard: panels, visualizations, queries, variables, time picker
+- Use Suggested Dashboards and Saved Queries to kick-start dashboard creation
+- Iterate on a dashboard by refining layouts and adapting visualization types
 - Create template variables to make a dashboard adapt to the viewer
 - Apply best practices: naming, descriptions, layout
+- Create an alert from a dashboard
 
 ---
 
@@ -21,10 +22,10 @@ By the end of this workshop you will be able to:
 
 | Section | Facilitator | Duration |
 |---|---|---|
-| Welcome and setup | Yaëlle | 15 min |
+| Welcome and Introductions | Both | 15 min |
 | Basic concepts behind dashboarding | Alexa | 15 min |
 | From data to insight: static data | Yaëlle | 30 min |
-| From data to insight: live data | Alexa | 30 min |
+| From data to insight: data that changes over time | Alexa | 30 min |
 | Break | | 15 min |
 | Hands-on Challenges | Both | 1 hour |
 
@@ -32,11 +33,10 @@ By the end of this workshop you will be able to:
 
 ## Your Grafana instance
 
-- **Grafana URL:** https://afcb45.grafana.net/
+- **Grafana URL:** https://ecbf94.grafana.net/
 - **Data sources available:**
   - `grafanacloud-prom` — Prometheus (Kubernetes metrics)
   - Infinity — public APIs (weather, open data)
-  - Business Intelligence — Google Sheets
 
 ---
 
@@ -57,10 +57,9 @@ Each challenge gives you a starting dashboard. You work in your own copy:
 
 ## Challenges
 
-- [Challenge 1: The Manager's View](./challenges/challenge-1-managers-view/README.md) — K8s · Alexa
-- [Challenge 2: Team Weather Dashboard](./challenges/challenge-2-weather/README.md) — Infinity · Yaëlle
-- [Challenge 3: Survey Feedback Visualizer](./challenges/challenge-3-bi/README.md) — Google Sheets · Yaëlle
-- [Challenge 4: The Deployment Watchdog](./challenges/challenge-4-deployment-watchdog/README.md) — K8s · Alexa
+- [Challenge 1: Team Weather Dashboard](./challenges/challenge-1-weather/README.md) — Infinity · Yaëlle
+- [Challenge 2: Service Level Monitoring](./challenges/challenge-2-service-level/README.md) — K8s / Prometheus · Alexa
+- [Challenge 3: Survey Feedback Visualizer](./challenges/challenge-3-survey/README.md) — TestData · Yaëlle
 - [Stretch: Set up an Alert](./challenges/stretch-alert/README.md) — Alexa
 
 ---

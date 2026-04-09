@@ -6,13 +6,13 @@
 
 ## Context
 
-You built a deployment watchdog dashboard. Now take it one step further: instead of checking the dashboard manually, let Grafana alert you automatically when something goes wrong.
+You built a Kubernetes health dashboard in Section 2. Now take it one step further: instead of checking the dashboard manually, let Grafana alert you automatically when something goes wrong.
 
 ---
 
 ## Task
 
-Set up an alert on your pod restarts panel that fires when pod restarts exceed a threshold.
+Set up an alert on a panel that fires when an anomaly is detected — for example, when pod restarts exceed a threshold.
 
 ---
 
@@ -20,8 +20,8 @@ Set up an alert on your pod restarts panel that fires when pod restarts exceed a
 
 ### 1. Create an alert from a panel
 
-1. Open your deployment watchdog dashboard
-2. Open the **Pod Restarts** panel in edit mode
+1. Open your Kubernetes dashboard (from Section 2 or Challenge 2)
+2. Open a panel that tracks a meaningful metric (e.g. pod restarts, error rate)
 3. Go to the **Alert** tab
 4. Click **New alert rule**
 
@@ -49,7 +49,7 @@ Define what an anomaly looks like:
 
 ## Result
 
-When pods restart in the monitored namespace, Grafana fires the alert automatically. No more manual dashboard checks after every deploy.
+When pods restart in the monitored namespace, Grafana fires the alert automatically. No more manual dashboard checks.
 
 ---
 
