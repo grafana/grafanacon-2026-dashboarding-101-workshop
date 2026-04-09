@@ -217,3 +217,8 @@ What you learnt in this section:
 5. A **custom variable** to make the dashboard interactive
 6. **Transformations** to filter the data based on variable selected
 7. **Repeats** to generate panels/tabs dynamically
+
+---
+
+> **No peeking!** A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
+> When you're done: [View solution dashboard](./barcelona-wifis-solution.json)

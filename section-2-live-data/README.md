@@ -131,3 +131,8 @@ Variables make a dashboard reusable. Instead of one static view, the dashboard a
 | One panel, one question | Cram multiple unrelated metrics into one panel |
 | Use units: `%`, `req/s`, `ms` | Leave values without context |
 | Add a description — Grafana's AI assistant reads it | |
+
+---
+
+> **No peeking!** A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
+> When you're done: [View solution dashboard](./k8s-health-solution.json)
