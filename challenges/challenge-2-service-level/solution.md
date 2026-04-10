@@ -55,10 +55,20 @@ These are your key indicators of performance issues.
 
 In your team: latency >= 2 seconds is a problem.
 
-Set thresholds:
-- Green: < 1s
-- Yellow: 1s – 2s
-- Red: >= 2s
+1. In the panel editor, go to **Standard options** and set:
+   - **Min:** `0`
+   - **Max:** `10`
+
+   > **This is required.** Without both min and max set, the gauge will not display threshold colors even if thresholds are configured.
+
+2. Under **Thresholds**, set:
+   - Green: < 1s
+   - Yellow: 1s – 2s
+   - Red: >= 2s
+
+3. Make sure **Thresholds mode** is set to **Absolute** (not Percentage).
+
+4. If the gauge shows as a half-arc instead of a full circle, go to **Gauge > Style** and select **Full** (complete arc).
 
 ### Step 4 — Reorganize the dashboard
 
@@ -75,3 +85,7 @@ Organize panels into tabs or sections:
 ### Result
 
 The dashboard now immediately shows whether latency is healthy (green) or problematic (red). No more guessing — a glance tells you if adding plushes to the cart is fast or slow.
+
+**Example result** — your dashboard may look slightly different depending on how you reorganize it:
+
+![Challenge 2 end result](../../img/challenge-2-result.png)
