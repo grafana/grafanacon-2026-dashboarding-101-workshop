@@ -2,7 +2,7 @@
 
 **Data source:** Infinity · **Facilitator:** Yaëlle
 
-**Starting dashboard:** [Open in Grafana](https://ecbf94.grafana.net/d/weather-team-openmeteo/f09f8c8d-challenge-1-3a-team-weather)
+**Starting dashboard:** _TBD_
 _(Make a copy before editing — Save > Save as Copy > select your folder)_
 
 ---

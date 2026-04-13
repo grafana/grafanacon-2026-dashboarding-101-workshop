@@ -1,0 +1,101 @@
+{
+  "Paris": {
+    "latitude": 48.86,
+    "longitude": 2.3599997,
+    "generationtime_ms": 0.02181529998779297,
+    "utc_offset_seconds": 7200,
+    "timezone": "Europe/Paris",
+    "timezone_abbreviation": "GMT+2",
+    "elevation": 36.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C"
+    },
+    "current": {
+      "time": "2026-04-13T14:45",
+      "interval": 900,
+      "temperature_2m": 12.0
+    }
+  },
+  "Sankt Augustin": {
+    "latitude": 50.764,
+    "longitude": 7.192,
+    "generationtime_ms": 0.010609626770019531,
+    "utc_offset_seconds": 7200,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+2",
+    "elevation": 69.0,
+    "location_id": 1,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C"
+    },
+    "current": {
+      "time": "2026-04-13T14:45",
+      "interval": 900,
+      "temperature_2m": 9.7
+    }
+  },
+  "Westminster": {
+    "latitude": 51.49349,
+    "longitude": -0.13172913,
+    "generationtime_ms": 0.01049041748046875,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/London",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 13.0,
+    "location_id": 2,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C"
+    },
+    "current": {
+      "time": "2026-04-13T13:45",
+      "interval": 900,
+      "temperature_2m": 12.1
+    }
+  },
+  "Zurich": {
+    "latitude": 47.38,
+    "longitude": 8.539999,
+    "generationtime_ms": 0.010967254638671875,
+    "utc_offset_seconds": 7200,
+    "timezone": "Europe/Zurich",
+    "timezone_abbreviation": "GMT+2",
+    "elevation": 409.0,
+    "location_id": 3,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C"
+    },
+    "current": {
+      "time": "2026-04-13T14:45",
+      "interval": 900,
+      "temperature_2m": 9.7
+    }
+  },
+  "Barcelona": {
+    "latitude": 41.375,
+    "longitude": 2.125,
+    "generationtime_ms": 0.007867813110351562,
+    "utc_offset_seconds": 7200,
+    "timezone": "Europe/Madrid",
+    "timezone_abbreviation": "GMT+2",
+    "elevation": 28.0,
+    "location_id": 4,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C"
+    },
+    "current": {
+      "time": "2026-04-13T14:45",
+      "interval": 900,
+      "temperature_2m": 16.9
+    }
+  }
+}

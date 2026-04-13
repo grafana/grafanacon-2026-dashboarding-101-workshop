@@ -33,7 +33,7 @@ Your job: build a single dashboard that gives you — and your team — everythi
 
 ## Step 1 — Log in
 
-Open your Grafana instance URL (`https://ecbf94.grafana.net/`) and log in with the provided credentials.
+Open your Grafana instance URL and log in with the provided credentials.
 
 ---
 
@@ -188,4 +188,4 @@ Apply custom thresholds to **Memory Usage / Requests & Limits by container** to 
 ---
 
 > **No peeking!** A solution dashboard is available for reference, but try to complete the exercise on your own first.
-> When you're done: [View solution dashboard](https://ecbf94.grafana.net/goto/dfik6l00xsyrkf?orgId=stacks-1586144)
+> When you're done: View solution dashboard — _link TBD_

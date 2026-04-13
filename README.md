@@ -33,7 +33,7 @@ By the end of this workshop you will be able to:
 
 ## Your Grafana instance
 
-- **Grafana URL:** https://ecbf94.grafana.net/
+- **Grafana URL:** _TBD_
 - **Data sources available:**
   - `grafanacloud-prom` — Prometheus (Kubernetes metrics)
   - Infinity — public APIs (weather, open data)

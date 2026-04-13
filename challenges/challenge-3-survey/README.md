@@ -2,7 +2,7 @@
 
 **Data source:** TestData (CSV) · **Facilitator:** Yaëlle
 
-**Starting dashboard:** [Open in Grafana](https://ecbf94.grafana.net/d/beg8ml8/f09f97b3-efb88f-challenge-3-3a-survey)
+**Starting dashboard:** _TBD_
 _(Make a copy before editing — Save > Save as Copy > select your folder)_
 
 ---
