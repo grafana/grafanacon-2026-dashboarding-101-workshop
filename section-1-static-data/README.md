@@ -221,4 +221,4 @@ What you learnt in this section:
 ---
 
 > **No peeking!** A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
-> When you're done: [View solution dashboard](./barcelona-wifis-solution.json)
+> When you're done / if you're really stuck: [View solution dashboard](https://acde96.grafana.net/goto/bfjjnd3o9k54wb?orgId=stacks-1597849) or [Get json to import](./barcelona-wifis-solution.json)
