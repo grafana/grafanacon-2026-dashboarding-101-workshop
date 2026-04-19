@@ -8,20 +8,22 @@ Two audiences, two views — same dashboard.
 
 ### Step 1 — Create tabs
 
-1. In the dashboard edit mode, switch the layout to **Tabs**
+1. Group the panels into a Tab clicking the **group to tab** button
 2. Name the first tab: `Completion`
-3. Add a second tab: `Feedback`
+3. Create a second tab (click **add tab** button), name it: `Feedback`
 
 ### Step 2 — Organise panels into tabs
 
 **Completion tab** — focused on attendance and response rates:
+
 - Responses stat panel (response rate %)
 - Responses over time (time series)
 
 **Feedback tab** — focused on actual survey results:
+
 - Event Satisfaction (bar chart)
 - Session Satisfaction (bar chart)
-- Event Relevance (pie chart)
+- Raw responses (table)
 
 ### Step 3 — Move existing panels
 
@@ -54,16 +56,19 @@ The new question "Would you recommend the lab to a colleague?" has boolean (yes/
 ### Step 3 — Change the visualization
 
 1. Switch the visualization to **Pie chart**
-2. This naturally shows the yes/no proportion at a glance
+2. Set Value options > Show to **all values**
+3. This now shows the yes/no proportion at a glance
 
 ### Step 4 — Update the title
 
-Change the panel title to: `Would you recommend this lab?`
+Change the panel title to: `Lab Recommendation`
 
-### Step 5 — Place the panel
-
-Move the new pie chart into the **Feedback** tab alongside the other feedback panels.
 
 ### Result
 
 A pie chart showing the yes/no split. At a glance, facilitators and event teams can see the recommendation rate.
+
+
+A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
+- [View solution dashboard](https://acde96.grafana.net/goto/afjk5rzai1m2ob?orgId=stacks-1597849)  
+- [Get json to import](./challenge3-solution.json)
