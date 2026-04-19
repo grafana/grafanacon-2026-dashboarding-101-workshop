@@ -33,7 +33,7 @@ Your job: build a single dashboard that gives you — and your team — everythi
 
 ## Step 1 — Log in
 
-Open your Grafana instance URL (`https://ecbf94.grafana.net/`) and log in with the provided credentials.
+Open your Grafana instance URL and log in with the provided credentials.
 
 ---
 
@@ -62,52 +62,105 @@ You should now see a dashboard with live pod data.
 
 ---
 
-## Step 4 — Explore what is there
+## Step 4 — Tailor the default dashboard to your needs
 
-Do not edit anything yet. Just look.
-
-1. Find a panel showing **request rate** — which RED signal is this?
-2. Find a panel showing **errors** or failed pods
-3. Change the time range (top-right) from `Last 1h` to `Last 3h`
-4. Watch the panels update — does the trend tell a different story?
-
-**Checkpoint:** Did your panels update when you changed the time range?
+The Kubernetes dashboard is a great starting point, but it is designed for a broad audience. Your goal is to reshape it so it serves your team's specific needs.
 
 ---
 
-## Step 5 — Edit a panel
+## Step 5 — Filter the data to your services
 
-1. Click the `⋮` menu on any panel and select **Edit**
-2. Change the panel title to something descriptive, for example: `Pod Restart Count`
-3. Look at the query — this is PromQL. You do not need to write it today, just observe.
-4. Click **Apply** to save the panel change
+Before hiding variables, use them to narrow the dashboard down to the services your team owns.
 
----
+1. In the variable bar at the top, find the **pod** dropdown
+2. Select only the **payment** and **cart** pods
+3. Confirm that the panels update to show data for those pods only
 
-## Step 6 — Add a variable
-
-Variables make a dashboard reusable. Instead of one static view, the dashboard adapts to whoever is looking at it.
-
-1. Open **Dashboard settings** (gear icon, top right)
-2. Go to **Variables** and click **Add variable**
-3. Configure it:
-   - **Type:** Query
-   - **Name:** `namespace`
-   - **Data source:** `grafanacloud-prom`
-   - **Query:** `label_values(kube_pod_info, namespace)`
-4. Click **Run query** to preview the values, then **Apply**
-5. Go back to the dashboard — you should see a namespace dropdown at the top
-
-**Checkpoint:** Can you see the namespace dropdown? Try changing it and watch the panels update.
+**Checkpoint:** Are the panels now showing data for the payment and cart pods only?
 
 ---
 
-## Step 7 — Save your dashboard
+## Step 6 — Hide some variables to make the dashboard less overwhelming
+
+The default dashboard exposes many variables that may not be relevant to your use case. Hiding unnecessary ones reduces noise and makes the dashboard easier to use. Keep only **pod** and **resolution** visible.
+
+1. Click the **Edit** button (top right) to enter edit mode
+2. Hover over a variable in the variable bar — an edit pencil icon appears
+3. Click the pencil icon — a sidebar opens on the right
+4. Under **Display**, set the value to **Hidden**
+5. Repeat for each variable you want to hide, keeping only **pod** and **resolution** visible
+
+**Checkpoint:** Is the variable bar at the top of your dashboard shorter and easier to read?
+
+---
+
+## Step 7 — Save the dashboard
 
 1. Click the **Save** icon (top right)
-2. Give it a meaningful name: `ops / system-health`
-3. Add a description: who is this dashboard for and what question does it answer?
+2. Give it a meaningful name, for example: `Payment Squad / K8s Health`
+3. Add a description — who is this dashboard for, and what question does it answer?
 4. Click **Save**
+
+---
+
+## Step 8 — Change the layout from rows to tabs
+
+Tabs make it easier to navigate between groups of panels without scrolling through an entire page.
+
+1. Click the **Edit** button (top right) to enter edit mode
+2. Click the **cog icon** on the right side of the toolbar (just below the **+** button)
+3. Under **Layout**, select **Tabs**
+4. Save the dashboard
+
+---
+
+## Step 9 — Reorganise the tabs
+
+Arrange the tabs so your viewers can find what they need at a glance.
+
+1. In edit mode, drag and drop the tabs to reorder them
+2. Rename each tab to reflect its content clearly, for example: `Overview`, `CPU`, `Memory`, `Network`
+3. Save the dashboard
+
+**Checkpoint:** Does the tab order reflect the most common questions your team asks?
+
+---
+
+## Bonus
+
+### Override the series colour scheme
+
+Apply a consistent colour scheme to **CPU Usage Request** and **CPU Usage Limit** to distinguish them clearly.
+
+1. Open the panel in edit mode
+2. Go to the **Overrides** tab in the right panel
+3. Click **Add field override** > **Fields with name**
+4. Select the series you want to override (e.g. `CPU Usage Request`)
+5. Click **Add override property** > **Standard options > Color scheme**
+6. Choose a colour and apply
+7. Repeat for `CPU Usage Limit`
+
+> **Tip:** You can use **Panel styles presets** for quick, consistent styling across panels.
+
+---
+
+### Change thresholds for a time series
+
+Apply custom thresholds to **Memory Usage / Requests & Limits by container** to highlight critical states visually.
+
+1. Open the panel in edit mode
+2. In the right panel, go to **Standard options** > **Thresholds**
+3. Set the following thresholds:
+
+| Value | Colour |
+|---|---|
+| Base | Blue |
+| 20 % | Purple |
+| 30 % | Green |
+| 60 % | Orange |
+| 80 % | Red |
+
+4. Click **Apply** to save your changes
 
 ---
 
@@ -115,10 +168,10 @@ Variables make a dashboard reusable. Instead of one static view, the dashboard a
 
 - **No need to reinvent the wheel** — use suggested dashboards
 - **Tailor the default dashboard** to your needs:
-  - Hide some variables to make it less overwhelming
-  - Changed the layout from rows to tabs
+  - Hide variables to make the dashboard less overwhelming
+  - Change the layout from rows to tabs
   - Reorganise the tabs to make it easier for viewers to find what they need
-- **Bonus:** override series colour scheme, change thresholds for a time series
+- **Bonus:** override the series colour scheme, change thresholds for a time series
 
 ---
 
@@ -134,5 +187,5 @@ Variables make a dashboard reusable. Instead of one static view, the dashboard a
 
 ---
 
-> **No peeking!** A solution dashboard JSON is available for reference, but try to complete the exercise on your own first.
-> When you're done: [View solution dashboard](./k8s-health-solution.json)
+> **No peeking!** A solution dashboard is available for reference, but try to complete the exercise on your own first.
+> When you're done: View solution dashboard — _link TBD_
