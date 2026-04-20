@@ -2,8 +2,10 @@
 
 **Data source:** Infinity · **Facilitator:** Yaëlle
 
-**Starting dashboard:** _TBD_
+**Starting dashboard:** [Open in Grafana](https://acde96.grafana.net/d/weather-team-openmeteo)
 _(Make a copy before editing — Save > Save as Copy > select your folder)_
+
+**Submit your answer:** [Via this form](https://docs.google.com/forms/d/e/1FAIpQLSfoaIbrcuTWsPGgfZOuKOv8wm4wB8gSAtwTKm9WUuq8S8OMqw/viewform?usp=dialog)
 
 ---
 
@@ -21,6 +23,36 @@ A new team member joins from Barcelona, Spain:
 > "I want to add that location's information to the dashboard."
 
 Barcelona coordinates: **41.3874° N, 2.1686° E**
+
+## Hints
+
+<details>
+<summary>Task 1 hints</summary>
+
+- **Duplicate** any existing temperature panel
+- Change the `latitude` and `longitude` in the URL to Barcelona's: `latitude=41.3874&longitude=2.1686`
+- Update the panel title to include Barcelona
+- Change the row settings to allow **6 panels per row** max
+- **Alternative:** Use the saved query "Paris Temperature" and update the coordinates
+
+</details>
+
+<details>
+<summary>Task 1 optimisation hints</summary>
+You can set up a custom variable with options leveraging multiple properties - use **JSON** format:
+
+```json
+[
+  { "value": "🇫🇷 Paris", "latitude": 48.8566, "longitude": 2.3522 },
+  { "value": "🇩🇪 Sankt Augustin", "latitude": 50.7753, "longitude": 7.1872 },
+  { "value": "🇳🇴 Maura", "latitude": 60.3752, "longitude": 5.3358 },
+  { "value": "🇬🇧 Westminster", "latitude": 51.4975, "longitude": -0.1357 },
+  { "value": "🇨🇭 Zurich", "latitude": 47.3769, "longitude": 8.5417 },
+  { "value": "🇪🇸 Barcelona", "latitude": 41.3874, "longitude": 2.1686 }
+]
+```
+
+</details>
 
 ---
 
@@ -46,20 +78,7 @@ https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&current
 
 Returns current temperature for Paris.
 
----
-
 ## Hints
-
-<details>
-<summary>Task 1 hints</summary>
-
-- **Duplicate** any existing temperature panel
-- Change the `latitude` and `longitude` in the URL to Barcelona's: `latitude=41.3874&longitude=2.1686`
-- Update the panel title to include Barcelona
-- Change the row settings to allow **6 panels per row** max
-- **Alternative:** Use the saved query "Paris Temperature" and update the coordinates
-
-</details>
 
 <details>
 <summary>Task 2 hints</summary>
